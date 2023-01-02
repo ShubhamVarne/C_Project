@@ -341,8 +341,6 @@ void initiate_chessboard_setup(CHESSBOARD_T** chessboard_pptr)
     chess_piece_placement(chessboard_pptr, CHESS_PIECE_PAWN, CHESSBOARD_FILE_F, CHESSBOARD_RANK_6, CHESS_PIECE_BLACK);
     chess_piece_placement(chessboard_pptr, CHESS_PIECE_PAWN, CHESSBOARD_FILE_G, CHESSBOARD_RANK_6, CHESS_PIECE_BLACK);
     chess_piece_placement(chessboard_pptr, CHESS_PIECE_PAWN, CHESSBOARD_FILE_H, CHESSBOARD_RANK_6, CHESS_PIECE_BLACK);
-
-
 }
 
 void chess_piece_placement(CHESSBOARD_T** chessboard_pptr, uint8_t chess_piece, uint8_t file_name, uint8_t rank_no, uint8_t colour_of_piece)
@@ -394,7 +392,7 @@ chess_move_t* player_move_input(void)
     chess_move_t* player_input = NULL;
 
     player_input = (chess_move_t*)chessboard_malloc(STD_MOVE_MEM_SIZE, sizeof(chess_move_t));
-
+/*
     printf("Enter your Move : ");
 
     for(uint8_t count = 0; count < STD_MOVE_MEM_SIZE; count++)
@@ -424,13 +422,14 @@ chess_move_t* player_move_input(void)
         player_input = NULL;
         player_input = player_move_input();
     }
-    
+    */
    return player_input;
 }
 
 uint8_t validate_move(chess_move_t player_move)
 {
     uint8_t valide_move = FALSE;
+    /*
     uint8_t input_compare = chess_input_compare(player_move, SHORT_CASTLE);
     if (input_compare)
     {
@@ -438,6 +437,7 @@ uint8_t validate_move(chess_move_t player_move)
         valide_move = TRUE;
         printf("Player played short castle\n");
     }
+    */
     return valide_move;
 }
 
